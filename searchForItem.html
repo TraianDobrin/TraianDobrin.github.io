@@ -1,0 +1,205 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        .parentDIV{
+            text-align: center;
+            border-color: darkgoldenrod;
+            border-style: solid;
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            width: 1050px;
+            justify-content: space-evenly;
+            background-color: darkgoldenrod;
+        }
+        .childDIV{
+            background-color: #001933;
+            color: darkgoldenrod;
+            font-size: x-large;
+        }
+        .higherClassSearchBar{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            margin-top: 100px;
+            width: fit-content;
+            margin-left:auto;
+            margin-right: auto;
+        }   
+        .classSearchBar{
+            display: flex;
+            text-align: center;
+            flex-direction: row;
+            position: relative;
+            border-color: black;
+            height: 50px;
+            border-width: 5px;
+            border-radius: 10px;
+            padding: 0px;
+            align-self: center;
+            background-color: darkgoldenrod;
+            border-style:solid;
+    
+        }
+        #childBar{
+            color: darkgoldenrod;
+            align-self: center;
+        }
+        #interestingID{
+            position: relative;
+            border-style: solid;
+            border-radius: 5px;
+            align-self: center;
+            background-color:burlywood;
+        }
+        #idItemListContent{
+            background-color: darkgoldenrod;
+            display: flex;
+            padding: 30px;
+            flex-direction: row;
+            border-radius: 5px;
+            position: relative;
+            margin-top: 35px;
+            height: fit-content;
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-evenly;
+        }
+        #idFilter{
+            background-color: #001933;
+            border-radius: 5px;
+            padding: 10px;
+            color: aliceblue;
+            height: 450px;
+            width: 250px;
+        }
+        .classWriting{
+            color: aliceblue;
+        }
+        #idListItem{
+            background-color: #001933;
+            border-radius: 5px;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+
+            width: 700px;
+            height: fit-content;
+        }
+        .childItemList{
+            border-color: aliceblue;
+            border-style: solid;
+            padding: 4px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body style="background-color:#001933">
+    <div class="parentDIV">
+        <div><button class="childDIV" onclick="location.href='index.html'" style="background-color: brown; cursor:pointer">Home Page</button></div>
+        <div><button class="childDIV" onclick="location.href='searchForItem.html'" style="cursor: pointer">Search</button></div>
+        <div><button class="childDIV" onclick="location.href='ShoppingCart.html'" style="background-color: brown;cursor:pointer">ShoppingCart</button></div>
+        <div><button class="childDIV" onclick="location.href='sellItem.html'" style="background-color: brown;cursor:pointer">Sell Item</button></div>
+        <div><button class="childDIV" onclick="location.href='log-in.html'" style="border-radius:30px; cursor:pointer">Log in</button></div>
+        <!-- onclick functionality for every button -->
+    </div>
+    <div class="higherClassSearchBar">
+        <div>
+            <img style="border-radius: 10px;" src="logo.jpg" width="140px">
+        </div>
+        <div class="classSearchBar">
+            <div id="childBar">
+                <input type="text" name="searchBar" autocomplete="on" style="font-size:medium;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" placeholder="Search for the desired item" size="80px">    
+            </div>
+                <div id="interestingID"><img style="display: block;" src="magnifyingglass.jpg" height="30px">
+            </div>
+        </div>
+    </div>
+        <!--
+            Big DIV for actual items composed of 2 big rectangles
+            one for filter, one for item, flex-displayed : row
+            each item is also a div inside the item div 
+        -->
+        <div id="idItemListContent">
+            <!--DIV for Filter-->
+            <div id="idFilter">
+                <h2 style="text-align: center;">Filter</h2>
+                <p style="font-size:large">Price range</p>
+                <form>
+                    <input type="radio" id="b1" name="fav_language1" value="0-500">
+                    <label for="b1">0-500</label><br>
+                    <input type="radio" id="b2" name="fav_language1" value="500-1000">
+                    <label for="b2">500-1000</label><br>
+                    <input type="radio" id="b3" name="fav_language1" value="1000-2000">
+                    <label for="b3">1000-2000</label>
+                </form>
+                <p style="font-size:large">Time on website</p>
+                <form>
+                    <input type="radio" id="b1" name="fav_language2" value="month">
+                    <label for="b1">1 month</label><br>
+                    <input type="radio" id="b2" name="fav_language2" value="week">
+                    <label for="b2">1 week</label><br>
+                    <input type="radio" id="b3" name="fav_language2" value="day">
+                    <label for="b3">1 day</label>
+                </form>
+                <p style="font-size:large">Item rating</p>
+                <form>
+                    <input type="radio" id="b1" name="fav_language3" value="least">
+                    <label for="b1">2-3 stars</label><br>
+                    <input type="radio" id="b2" name="fav_language3" value="medium">
+                    <label for="b2">3-4 stars</label><br>
+                    <input type="radio" id="b3" name="fav_language3" value="biggest">
+                    <label for="b3">4-5 stars</label>
+                </form>
+            </div>
+            <!--DIV for Item list-->
+            <div id="idListItem">
+                <h2 style="text-align: center;">Search items found for: 'User Input'</h2>
+                <div class="childItemList">
+                    <!--
+                        Item image
+                    -->
+                    <img src="thetruegodofwar.jpg" width="150px">
+                    <!--Description-->
+                    <div style="width: 450px;">
+                        <h3 style="text-decoration: underline;">Playstation 5 - God Of War Ragnarok</h3>
+                        <p>Category: Action</p>
+                        <p>Age Restriction: 18+</p>
+                        <p>Popularity: Very</p>
+                        <p>Release Date: 9 November 2022</p>
+                    </div>
+                </div>
+                <br>
+                <div class="childItemList">
+                    <img src="gta.jpg" width="150px">
+                    <div style="width: 450px;">
+                    <h3 style="text-decoration: underline;">Playstation 5 - Grand theft auto V</h3>
+                        <p>Category: Action</p>
+                        <p>Age Restriction: 18+</p>
+                        <p>Popularity: Medium</p>
+                        <p>Release Date: 17 September 2013</p>
+                    </div>
+                    </div><br>
+                <div class="childItemList">
+                    <img src="fifa.jpg" width="150px">
+                    <div style="width: 450px;">
+                    <h3 style="text-decoration: underline;">Playstation 5 - FIFA 23</h3>
+                        <p>Category: Sports</p>
+                        <p>Age Restriction: 3</p>
+                        <p>Popularity: Very</p>
+                        <p>Release Date: 27 September 2022</p>
+                    </div>
+                    </div><br>
+                </div>
+            </div>
+        
+
+</body></html>

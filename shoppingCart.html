@@ -1,0 +1,187 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+<style>
+.body{
+    background-image:url(logo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    padding: 10px;
+    opacity: 0.98;
+}
+.list{
+    background-color: darkgoldenrod;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    height: fit-content;
+    width:50%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    position: relative;
+}
+.buttonfifa{
+    position: relative;
+    cursor: pointer;
+    background-image: url(fifa.jpg);
+    background-size: 150px;
+    margin-top: 5px;
+    margin-left: 40%;
+    margin-bottom: 40%;
+    width:150px;
+    height: 150px;
+    border-radius: 30px;
+border:none;
+}
+.prodname{
+    position: relative;
+    width: 150px;
+    height:fit-content;
+    /* margin-left:30%; */
+    margin-top: 0%;
+    color: black;
+    align-self: center;
+}
+.newitem{
+    margin-left: 10px;
+    margin-top: 20px;
+    border: solid black;
+    border-width: 5px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    /* box-sizing: content-box; */
+    height: fit-content;
+   padding-left: 10%;
+   margin-right: 10px;
+}
+.buttongta{
+    position: relative;
+    cursor: pointer;
+    background-image: url(gta.jpg);
+    background-size: 150px;
+    margin-top: 5px;
+    margin-left: 40%;
+    margin-bottom:40%;
+    width:150px;
+    height:150px;
+    border-radius: 30px;
+border:none;
+}
+.title{
+    margin-top: 3%;;
+    color:white;
+    text-align: center;
+}
+.grid-container {
+  display: grid;
+  row-gap: 50px;
+  justify-content: flex-start;
+  align-content: start; 
+}
+.totalprice{
+    margin-left: 20px;
+    color: black;
+    margin-top: 30px;
+}
+.checkout-button{
+    cursor:pointer;
+    background-attachment:fixed;
+    background-color: antiquewhite;
+    color:rgb(25, 18, 9);
+    border-radius: 1000px;
+    width:75px;
+    height: 75px;
+}
+.childDIV{
+        background-color: #001933;
+        color: darkgoldenrod;
+        font-size: x-large;
+}
+.parentDIV{
+    text-align: center;
+    border-color: darkgoldenrod;
+    border-style: solid;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    width: 1100px;
+    justify-content: space-evenly;
+    background-color: darkgoldenrod;
+}        
+</style></head>
+
+<body class="body" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:larger">
+    <div class="parentDIV">
+        <div><button class="childDIV" onclick="location.href='index.html'" style="background-color: brown; cursor:pointer">Home Page</button></div>
+        <div><button class="childDIV" onclick="location.href='searchForItem.html'" style="cursor: pointer">Search</button></div>
+        <div><button class="childDIV" onclick="location.href='ShoppingCart.html'" style="background-color: brown;cursor:pointer">ShoppingCart</button></div>
+        <div><button class="childDIV" onclick="location.href='sellItem.html'" style="background-color: brown;cursor:pointer">Sell Item</button></div>
+        <div><button class="childDIV" onclick="location.href='log-in.html'" style="border-radius:30px; cursor:pointer">Log in</button></div>
+        <!-- onclick functionality for every button -->
+    </div>
+    <h1 class="title" style="background-color:darkgoldenrod;border-radius: 5px;width: 400px;margin-left: auto;margin-right: auto;">Shopping cart:</h1><div class="list ">
+            <h2 style="margin-left: 10px;">My List:</h2>
+            <div class="newitem">
+                <div class="prodname">
+                    <button class="buttonfifa" onclick="location.href='test.html'" style="right: 150px;"></button>
+                </div>
+                <div class="prodname" style="width: 250px;right: 65px;">
+                    FIFA23
+                    <br>
+                    Price: 50 EUR
+                    <br>
+                
+                    <label for="gift" value="gift">This is a gift</label>
+                    <input type="checkbox" style="cursor:pointer">
+                    <br>
+                    <label for="quantity" value="quantity">Quantity</label>
+                    <input type="number" style="border-radius: 100px">
+                
+            </div>
+                </div>
+                <div class="newitem">
+                    <div class="prodname">
+                    <button class="buttongta" onclick="location.href='test.html'" style="right: 150px;"></button>
+                    </div>
+                    <div class="prodname" style="width: 250px;right:65px;">
+                    Grand Theft Auto V
+                    <br>
+                    Price: 50 EUR
+                    <form></form>
+                    <label for="gift" value="gift">This is a gift</label>
+                    <input type="checkbox" style="cursor:pointer">
+                    <br>
+                    <label for="quantity" value="quantity">Quantity</label>
+                    <input type="number" style="border-radius: 100px">
+                    </div>
+                
+                </div>
+                <div style="display: flex;flex-direction: row; justify-content: space-evenly;">
+                    <div class="totalprice" style="align-self: center;">
+                        <h2>Total price: 100 EUR</h2><h2></h2>
+                    </div>
+                    <button type="submit" style="align-self: center;" form="items" class="checkout-button" value="checkout"><h1 style="font-size:11px; ">CHECKOUT</h1></button></div>
+                </div><table>
+        <thead></thead>
+        <tbody><form id="items"></form>
+            
+                
+        
+        
+        </tbody>
+
+    </table>
+
+</body></html>

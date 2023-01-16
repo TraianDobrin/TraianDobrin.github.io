@@ -1,0 +1,165 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell products</title>
+<style>
+.form{
+    color: #001933;
+    background-color: darkgoldenrod;
+    margin-top: 20px;
+    align-self: center;
+    border-radius: 5px;
+    width: 500px;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navbar{
+    background-color: darkgoldenrod;
+    width:1300px;
+    height: 10;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+    border-radius: 2px;
+}
+.button{
+    cursor: pointer;
+    background-image: url(newhome.jpg);
+    background-size: 75px;
+    margin: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width:75px;
+    height:75px;
+    border-radius: 50px;
+border:none;
+}
+.body{
+    background-image:url(logo.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 10px;
+}
+.actual-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.buttonsubmit
+{
+      cursor: pointer;
+      width: 200px;
+      padding: 1em;
+      margin-bottom: 10%;
+      border: none;
+      border-bottom: 5px solid;
+      border-radius: 0.5em;
+      background-color: #001933;
+      color: rgb(0, 0, 0);
+}
+.parentDIV{
+            text-align: center;
+            border-color: darkgoldenrod;
+            border-style: solid;
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            width: 1000px;
+            justify-content: space-evenly;
+            background-color: darkgoldenrod;
+        }
+        .childDIV{
+            background-color: #001933;
+            color: darkgoldenrod;
+            font-size: x-large;
+        }
+        /* input {
+            width: 100px;
+        } */
+        .bord{
+            width: 600px;
+            height: 1050px;
+            border-style: solid;
+            border-width: 10px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            border-color: darkgoldenrod;
+        }
+</style></head>
+
+<body class="body" style="background-color: #001933;">
+
+    <div class="parentDIV">
+        <div><button class="childDIV" onclick="location.href='index.html'" style="background-color: brown; cursor:pointer">Home Page</button></div>
+        <div><button class="childDIV" onclick="location.href='searchForItem.html'" style="cursor: pointer">Search</button></div>
+        <div><button class="childDIV" onclick="location.href='ShoppingCart.html'" style="background-color: brown;cursor:pointer">ShoppingCart</button></div>
+        <div><button class="childDIV" onclick="location.href='sellItem.html'" style="background-color: brown;cursor:pointer">Sell Item</button></div>
+        <div><button class="childDIV" onclick="location.href='log-in.html'" style="border-radius:30px; cursor:pointer">Log in</button></div>
+        <!-- onclick functionality for every button -->
+    </div>
+
+<div class="bord">
+<div class="form" style="align-self: center;">
+    <div>
+<h2 style="text-align:center"> Add a product</h2><div class="actual-form">
+<label for="pname">Product name:</label><br>
+<input type="text" placeholder="ex. Sony TV" style="width:300px;height: 27px;">
+<label for="Price">Price:</label><br>
+<input type="number" placeholder="ex. 500 EUR" style="width:300px;height: 27px;"><br>
+<label for="check1">Negotiable</label>
+<input type="checkbox" name="check1"><br>
+<label for="Description">Description:</label><br>
+<textarea placeholder="Ex: age, state, etc." style="width:300px;"></textarea>
+<label for="Form-of-delivery">Delivery Type:</label><br>
+<select name="Form-of-delivery" id="n" style="width: 300px;height: 27px;">
+<option value="courier">Courier</option>
+<option value="Pick-up">Pick-up</option>
+</select>
+<label for="country">Country of sale:</label><br>
+<select name="country" id="country" style="width: 300px;height:27px">
+<option value="Netherlands">The Netherlands</option>
+<option value="Romania">Romania</option>
+<option value="Other">Other</option>
+</select><br>
+<label for="category">Category:</label>
+
+<select name="category" id="category" style="width: 300px;height: 27px;">
+<option value="Books">Books</option>
+<option value="Electronics">Electronics</option>
+<option value="Food">Food</option>
+<option value="Gaming">Gaming</option>
+<option value="Movies">Movies</option>
+<option value="Other">Other</option>
+</select>
+<br>
+<label for="Photo">Photo:</label>
+<input type="file" accept="image/png, image/jpeg" style="width:150px">
+<br><br>
+<button type="submit" form="formm" value="sign-up" class="buttonsubmit"><h2 style="color:aliceblue">Add product!</h2></button><br>
+</div><table>
+    <form id="formm"></form>
+<thead>
+    
+</thead>
+<tbody>
+    
+</tbody>
+
+</table>
+</div>
+</div>
+
+</div></body></html>
